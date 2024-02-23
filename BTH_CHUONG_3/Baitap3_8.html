@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baitap_3.8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 22px;
+            color: black;
+            background-color: khaki;
+        }
+        #menu ul {
+            background-color: blue;
+            list-style-type: none;
+            text-align: center;
+            align-items: center;
+        }
+        #menu li {
+            color: black;
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+        }
+        #menu ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        #menu ul li a:hover {
+            background: white;
+            color: black;
+        }
+        #menu li:hover {
+            background-color: blue;
+            color: black;
+        }
+        #menu ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: khaki;
+            padding: 0px;
+        }
+        #menu ul ul li {
+            width: 100%;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            background-color: blue;
+        }
+        #menu ul ul li:last-child {
+            border-bottom: none;
+        }
+        #menu ul ul ul {
+            top: 0;
+            left: 100%;
+            padding: 0px;
+        }
+        #menu ul ul ul li {
+            width: 100%;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+            background-color: purple;
+        }
+        #menu ul ul ul li:last-child {
+            border-bottom: none;
+        }
+        #menu li:hover > ul {
+            display: block;
+            width: 325px;
+            height: 365px;
+            text-align: left;
+        }
+    </style>    
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Khóa học</a>
+                <ul>
+                    <li><a href="#">Tin học căn bản</a>
+                        <ul>
+                            <li><a href="#">Microsoft Word 2010</a></li>
+                            <li><a href="#">Microsoft Excel 2010</a></li>
+                            <li><a href="#">Microsoft PowerPoint 2010</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tin học phổ thông</a></li>
+                    <li><a href="#">Lập trình Pascal</a></li>
+                    <li><a href="#">Lập trình C</a></li>
+                    <li><a href="#">Thiết kế website</a></li>
+                    <li><a href="#">Vẽ kỹ thuật AutoCAD</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Bài viết</a></li>
+            <li><a href="#">Thủ thuật</a></li>
+        </ul>
+    </div>
+</body>
+</html>
