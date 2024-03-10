@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_14B</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function tinhToan() {
+            var soHang1 = parseFloat(document.getElementsByName("SoHang1")[0].value);
+            var soHang2 = parseFloat(document.getElementsByName("SoHang2")[0].value);
+            var phepTinh = document.querySelector('input[name="phepTinh"]:checked').value;
+            var ketQua = 0;
+
+            switch (phepTinh) {
+                case 'Cong':
+                    ketQua = soHang1 + soHang2;
+                    break;
+                case 'Tru':
+                    ketQua = soHang1 - soHang2;
+                    break;
+                case 'Nhan':
+                    ketQua = soHang1 * soHang2;
+                    break;
+                case 'Chia':
+                    if (soHang2 !== 0) {
+                        ketQua = soHang1 / soHang2;
+                    } else {
+                        alert("Không thể chia cho 0!");
+                        return;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            document.getElementsByName("KetQua")[0].value = ketQua;
+        }
+    </script>
+    <input type="text" name="SoHang1" style="height: 30px"> 
+    <input type="text" name="SoHang2" style="margin-left: 15px; height: 30px">&emsp;&nbsp;=
+    <input type="text" name="KetQua" style="margin-left: 15px; height: 30px"> 
+    <br><br>
+    <input type="radio" name="phepTinh" value="Cong" style="margin-left: 60px; padding: 6px 32px"> Cộng
+    <input type="radio" name="phepTinh" value="Tru" style="margin-left: 60px; padding: 6px 32px"> Trừ
+    <input type="radio" name="phepTinh" value="Nhan" style="margin-left: 60px; padding: 6px 32px"> Nhân
+    <input type="radio" name="phepTinh" value="Chia" style="margin-left: 60px; padding: 6px 32px"> Chia
+    <br><br>
+    <button onclick="tinhToan()" style="margin-left: 210px; padding: 6px 25px">Tính</button>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_22A</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function So(s) 
+        {
+            var ketqua = document.getElementsByName("Ketqua")[0];
+            ketqua.value += s;
+        }
+        
+        function PhepTinh(pheptinh) 
+        {
+            var ketqua = document.getElementsByName("Ketqua")[0];
+            ketqua.value += " " + pheptinh + " ";
+        }
+        
+        function KetQua() 
+        {
+            var ketqua = document.getElementById("Ketqua");
+            ketqua.value = eval(ketqua.value);
+        }
+
+        function xoa() 
+        {
+            var ketqua = document.getElementsByName("Ketqua")[0];
+            ketqua.value = "";
+        }
+    </script>
+    <input type="text" name="Ketqua" id="Ketqua" readonly>
+    <br><br>
+    <button onclick="So('0')" style="padding: 6px 21px">0</button>
+    <button onclick="So('1')" style="padding: 6px 21px">1</button>
+    <button onclick="So('2')" style="padding: 6px 21px">2</button>
+    <button onclick="So('3')" style="padding: 6px 21px">3</button>
+    <button onclick="So('4')" style="padding: 6px 21px">4</button>
+    <br>
+    <button onclick="So('5')" style="padding: 6px 21px">5</button>
+    <button onclick="So('6')" style="padding: 6px 21px">6</button>
+    <button onclick="So('7')" style="padding: 6px 21px">7</button>
+    <button onclick="So('8')" style="padding: 6px 21px">8</button>
+    <button onclick="So('9')" style="padding: 6px 21px">9</button>
+    <br>
+    <button onclick="PhepTinh('+')" style="padding: 6px 21px">+</button>
+    <button onclick="PhepTinh('-')" style="padding: 6px 21px">-</button>
+    <button onclick="PhepTinh('*')" style="margin: 4px; padding: 6px 21px">*</button>
+    <button onclick="PhepTinh('/')" style="padding: 6px 21px">/</button>
+    <button onclick="KetQua()" style="padding: 6px 21px">=</button>
+    <br>
+    <button onclick="xoa()" style="padding: 6px 21px">C</button>
+</body>
+</html>

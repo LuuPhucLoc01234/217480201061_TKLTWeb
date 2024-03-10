@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_21C</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function tinhToan() 
+        {
+            var so01 = parseFloat(document.getElementsByName("So01")[0].value);
+            var so02 = parseFloat(document.getElementsByName("So02")[0].value);
+            var phepToan = document.getElementsByName("phepToan")[0].value;
+            var ketqua;
+
+            switch (phepToan) 
+            {
+                case 'cong':
+                    ketqua = so01 + so02;
+                    break;
+                case 'tru':
+                    ketqua = so01 - so02;
+                    break;
+                case 'nhan':
+                    ketqua = so01 * so02;
+                    break;
+                case 'chia':
+                    ketqua = so01 / so02;
+                    break;
+                default:
+                    break;
+            }
+            document.getElementsByName("Ketqua")[0].value = ketqua;
+        }
+    </script>
+    <input type="text" name="So01" placeholder="Số thứ nhất">
+    <input type="text" name="So02" placeholder="Số thứ hai" style="margin-left: 30px">&emsp;&emsp;&nbsp;=
+    <input type="text" name="Ketqua" placeholder="Kết quả" style="margin-left: 30px" readonly>
+    
+    <p style="font-size: 20px;">Bạn hãy lựa chọn phép toán:</p>
+    <select name="phepToan">
+        <option value="cong">Cộng</option>
+        <option value="tru">Trừ</option>
+        <option value="nhan">Nhân</option>
+        <option value="chia">Chia</option>
+    </select>
+    &emsp;<button onclick="tinhToan()" style="padding: 6px 20px">Tính</button>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_14A</title>
+</head>
+<body>
+    <script>
+        function tinhToan(phepTinh) {
+            var soHang1 = parseFloat(document.getElementsByName("SoHang1")[0].value);
+            var soHang2 = parseFloat(document.getElementsByName("SoHang2")[0].value);
+            var ketQua = 0;
+
+            switch (phepTinh) {
+                case 'Cong':
+                    ketQua = soHang1 + soHang2;
+                    break;
+                case 'Tru':
+                    ketQua = soHang1 - soHang2;
+                    break;
+                case 'Nhan':
+                    ketQua = soHang1 * soHang2;
+                    break;
+                case 'Chia':
+                    if (soHang2 !== 0) {
+                        ketQua = soHang1 / soHang2;
+                    } else {
+                        alert("Không thể chia cho 0!");
+                        return;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            document.getElementsByName("KetQua")[0].value = ketQua;
+        }
+    </script>
+    <input type="text" name="SoHang1" style="height: 30px"> 
+    <input type="text" name="SoHang2" style="margin-left: 15px; height: 30px">&emsp;&nbsp;=
+    <input type="text" name="KetQua" style="margin-left: 15px; height: 30px">
+    <br><br><br>
+    <button onclick="tinhToan('Cong')" style="margin-left: 30px; padding: 6px 32px">Cộng</button>
+    <button onclick="tinhToan('Tru')" style="margin-left: 30px; padding: 6px 32px">Trừ</button>
+    <button onclick="tinhToan('Nhan')" style="margin-left: 30px; padding: 6px 32px">Nhân</button>
+    <button onclick="tinhToan('Chia')" style="margin-left: 30px; padding: 6px 32px">Chia</button>
+</body>
+</html>

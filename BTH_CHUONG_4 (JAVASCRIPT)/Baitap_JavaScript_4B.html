@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_4B</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        document.write("<h1> Lấy nội dung trong textbox </h1><BR>")
+        document.write("<BR>")
+        function hoten ()
+        {
+            var textBoxHoten = document.getElementById("txthoten");
+            alert(textBoxHoten.value);
+        }
+        function donvi ()
+        {
+            var textBoxDonvi = document.getElementById("txtdonvi");
+            alert(textBoxDonvi.value);
+        }
+    </script>
+    <input type="button" name="hoten" value="Họ tên" onclick="hoten()"
+    style="font-family: 'Times New Roman'; font-size: 20px; padding: 6px 32px; text-align: center;">
+    <input type="text" id="txthoten" value="Chào"
+    style="font-family: 'Times New Roman'; font-size: 20px; padding: 6px 32px; text-align: center;">
+    <br>
+    <input type="button" name="donvi" value="Đơn vị" onclick="donvi()"
+    style="font-family: 'Times New Roman'; font-size: 20px; padding: 6px 32px; text-align: center; margin-top: 30px">
+    <input type="text" id="txtdonvi" value="Đơn vị"
+    style="font-family: 'Times New Roman'; font-size: 20px; padding: 6px 32px; text-align: center; margin-top: 30px">
+</body>
+</html>

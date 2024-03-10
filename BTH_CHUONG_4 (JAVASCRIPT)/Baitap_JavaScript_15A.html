@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_15A</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function thayDoiStyle() {
+            var mauNen = document.getElementsByName("MauNen")[0].value;
+            var mauChu = document.getElementsByName("MauChu")[0].value;
+            var tieuDe = document.getElementsByName("TieuDe")[0].value;
+            var trangThai = document.getElementsByName("TrangThai")[0].value;
+
+            document.body.style.backgroundColor = mauNen;
+            document.body.style.color = mauChu;
+            document.title = tieuDe;
+            window.status = trangThai;
+        }
+    </script>
+    <h2>Nhập vào các giá trị và nhấn nút Thay đổi</h2>
+    <input type="text" name="MauNen" placeholder="Màu nền">&emsp;
+    <input type="text" name="MauChu" placeholder="Màu chữ">&emsp;
+    <input type="text" name="TieuDe" placeholder="Tiêu đề">&emsp;
+    <input type="text" name="TrangThai" placeholder="Trạng thái">&emsp;
+    <input type="button" value="Thay đổi" onclick="thayDoiStyle()">
+</body>
+</html>

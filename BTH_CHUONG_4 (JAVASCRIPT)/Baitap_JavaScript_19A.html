@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_19A</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function hienThiThongBao (txt) {
+            alert(txt);
+        }
+        function hienthiThongBao (txt) {
+            alert(txt);
+        }
+        function hienthithongBao (txt) {
+            alert(txt);
+        }
+        function hienthithongbao (txt) {
+            alert(txt);
+        }
+    </script>
+    <div style="font-size: 25px;">
+        <input type="text" name="HoTen" 
+        onmouseover="hienThiThongBao('Bạn đang di chuyển chuột vào textbox HoTen')"><br><br>
+        <input type="radio" name="GioiTinh" value="Nam" 
+        onmouseover="hienthiThongBao('Bạn đang di chuyển chuột vào ô lựa chọn giới tính Nam')"> Nam
+        <input type="radio" name="GioiTinh" value="Nu" 
+        onmouseover="hienthithongBao('Bạn đang di chuyển chuột vào ô lựa chọn giới tính Nữ')"> Nữ<br><br>
+        <input type="button" value="Gửi" name="buttonGui" style="padding: 6px 32px;"
+        onmouseover="hienthithongbao('Bạn đang di chuyển chuột vào nút Gửi')">
+    </div>
+</body>
+</html>

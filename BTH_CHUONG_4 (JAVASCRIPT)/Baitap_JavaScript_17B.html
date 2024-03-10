@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_17B</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function thayDoiMau() 
+        {
+            var radios = document.getElementsByName("chonMau");
+            var chonMau;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    chonMau = radios[i].value;
+                    break;
+                }
+            }
+            document.body.style.backgroundColor = chonMau;
+        }
+    </script>
+    <br><br><br>
+    <input type="radio" name="chonMau" value="yellow" onclick="thayDoiMau()"> Vàng
+    <input type="radio" name="chonMau" value="green" onclick="thayDoiMau()"> Xanh lá
+    <input type="radio" name="chonMau" value="brown" onclick="thayDoiMau()"> Nâu
+    <input type="radio" name="chonMau" value="magenta" onclick="thayDoiMau()"> Magenta
+</body>
+</html>

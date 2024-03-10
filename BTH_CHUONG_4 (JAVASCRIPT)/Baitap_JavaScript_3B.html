@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_3B</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        document.write("<h1> Hiển thị thông tin trong Script </h1><BR>")
+        document.write("<BR>")
+        function hienthi() {
+            var textBox = document.getElementById("msg03");
+            alert(textBox.value + ", I am studying web design with JavaScript"); 
+        }
+    </script>
+    <input type="button" name="Hello" value="Hello" onclick="hienthi()" 
+    style="font-family: 'Times New Roman'; font-size: 20px; padding: 6px 32px; text-align: center;">
+    <input type="text" id="msg03" value="Hello Everybody" 
+    style="font-family: 'Times New Roman'; font-size: 20px; padding: 6px 32px; text-align: center; margin-left: 20px">
+</body>
+</html>

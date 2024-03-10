@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_9B</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th, tr, td {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        button {
+            padding: 16px 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        textarea {
+            font-size: 20px;
+            width: 100%;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <script lang="JavaScript">
+        function hienThiDanhSach() {
+            var danhSach = document.getElementById("danhSach").value;
+            var mangThietBi = danhSach.split(",");
+            var danhSachMayTinh = [];
+            for (var i = 0; i < mangThietBi.length; i++) {
+                if (mangThietBi[i].toUpperCase().includes("COMPUTER")) {
+                    danhSachMayTinh.push(mangThietBi[i]);
+                }
+            }
+            var tableContent = "<table><tr><th>STT</th><th>Tên thiết bị máy tính</th></tr>";
+            for (var j = 0; j < danhSachMayTinh.length; j++) {
+                tableContent += "<tr><td>" + (j + 1) + "</td><td>" + danhSachMayTinh[j] + "</td></tr>";
+            }
+            tableContent += "</table>";
+            document.getElementById("result").innerHTML = tableContent;
+        }
+    </script>
+    <h1>Nhập danh sách thiết bị văn phòng</h1>
+    <textarea id="danhSach" rows="4" cols="50" placeholder="Nhập danh sách các thiết bị, cách nhau bằng dấu phẩy..."></textarea><br><br>
+    <div id="container">
+        <button onclick="hienThiDanhSach()">Hiển thị danh sách máy tính</button><br><br>
+    </div>
+    <div id="result"></div>
+</body>
+</html>

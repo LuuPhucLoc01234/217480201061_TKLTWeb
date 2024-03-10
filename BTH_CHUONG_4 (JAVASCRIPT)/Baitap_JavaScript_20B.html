@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_20B</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function tinhLuong() 
+        {
+            var hoTen = document.getElementsByName("HoTen")[0].value;
+            var namVaoLam = parseFloat(document.getElementsByName("NamVaoLam")[0].value);
+            var heSo = parseFloat(document.getElementsByName("HeSo")[0].value);
+            var luongCoSo = parseFloat(document.getElementsByName("LuongCoSo")[0].value);
+
+            var luongCoBan = heSo * luongCoSo;
+            var phuCap = 0.25 * luongCoBan;
+            var thamNien = (new Date().getFullYear()) - namVaoLam;
+            var thanhTien = luongCoBan + phuCap;
+
+            document.getElementsByName("LuongCoBan")[0].value = luongCoBan;
+            document.getElementsByName("PhuCap")[0].value = phuCap;
+            document.getElementsByName("ThamNien")[0].value = thamNien;
+            document.getElementsByName("ThanhTien")[0].value = thanhTien;
+        }
+    </script>
+    <input type="text" name="HoTen" placeholder="Họ tên" oninput="tinhLuong()">
+    <input type="text" name="NamVaoLam" placeholder="Năm vào làm" oninput="tinhLuong()"><br><br>
+    <input type="text" name="HeSo" placeholder="Hệ số" oninput="tinhLuong()">
+    <input type="text" name="LuongCoSo" placeholder="Lương cơ sở" oninput="tinhLuong()"><br><br>
+    <input type="text" name="LuongCoBan" placeholder="Lương cơ bản" readonly><br><br>
+    <input type="text" name="PhuCap" placeholder="Phụ cấp" readonly><br><br>
+    <input type="text" name="ThamNien" placeholder="Thâm niên" readonly><br><br>
+    <input type="text" name="ThanhTien" placeholder="Thành tiền" readonly><br><br>
+</body>
+</html>

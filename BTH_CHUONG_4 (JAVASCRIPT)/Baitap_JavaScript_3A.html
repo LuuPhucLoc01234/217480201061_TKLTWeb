@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_3A</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        document.write("<h2> Tạo button và cửa sổ thông báo bằng JavaScript </h2><BR>")
+        document.write("<BR>")
+        function hienthi() {
+            var textBox = document.getElementById("msg03");
+            alert(textBox.value + "Students"); 
+        }
+    </script>
+    <input  type="button" name="welcome" value="Welcome" onclick="hienthi()">
+    <input type="text" id="msg03" value="Welcome to ">
+</body>
+</html>

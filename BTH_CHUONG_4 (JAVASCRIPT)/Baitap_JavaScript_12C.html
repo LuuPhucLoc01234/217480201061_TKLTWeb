@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_12C</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function hienThiHoTen() {
+            var ho = document.getElementsByName("Ho")[0].value;
+            var ten = document.getElementsByName("Ten")[0].value;
+            var hoTen = ho + " " + ten;
+            document.getElementsByName("Hoten")[0].value = hoTen;
+        }
+    </script>
+    <input type="text" name="Ho" value="Họ" style="height: 30px"><br><br>
+    <input type="text" name="Ten" value="Tên" style="height: 30px"><br><br>
+    <input type="text" name="Hoten" value="Họ và tên" style="height: 30px"><br><br>
+    <input type="button" name="Hienthi" value="Hiển thị" onclick="hienThiHoTen()">
+</body>
+</html>

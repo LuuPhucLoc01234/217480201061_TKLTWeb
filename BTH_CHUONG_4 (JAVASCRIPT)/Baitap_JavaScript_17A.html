@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_17A</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function thayDoiMau() 
+        {
+            var chonMau = document.getElementById("selectMau").value;
+            document.body.style.backgroundColor = chonMau;
+        }
+    </script>
+    <p style="font-size: 30px;">Bạn hãy chọn màu nền:</p>
+    <select id="selectMau" onchange="thayDoiMau()">
+        <option value="red">Đỏ</option>
+        <option value="blue">Xanh</option>
+        <option value="brown">Nâu</option>
+        <option value="lavender">Lavender</option>
+    </select>
+</body>
+</html>

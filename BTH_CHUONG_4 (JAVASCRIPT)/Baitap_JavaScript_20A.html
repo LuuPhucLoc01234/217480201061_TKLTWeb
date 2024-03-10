@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_20A</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function tinhThanhTien() 
+        {
+            var soLuong = parseFloat(document.getElementsByName("SoLuong")[0].value);
+            var donGia = parseFloat(document.getElementsByName("DonGia")[0].value);
+            var thanhTien = soLuong * donGia;
+
+            document.getElementsByName("ThanhTien")[0].value = thanhTien;
+        }
+    </script>
+    <input type="text" name="SoLuong" placeholder="Số lượng" oninput="tinhThanhTien()"
+    style="padding: 16px 32px; text-align: center">  *  
+    <input type="text" name="DonGia" placeholder="Đơn giá" oninput="tinhThanhTien()"
+    style="padding: 16px 32px; text-align: center">  =  
+    <input type="text" name="ThanhTien" placeholder="Thành tiền" readonly
+    style="padding: 16px 32px; text-align: center">
+</body>
+</html>

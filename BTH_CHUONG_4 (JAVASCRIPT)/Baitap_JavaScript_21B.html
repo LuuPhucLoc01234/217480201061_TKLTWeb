@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap_JavaScript_21B</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        function tinhToan() 
+        {
+            var so01 = parseFloat(document.getElementsByName("So01")[0].value);
+            var so02 = parseFloat(document.getElementsByName("so02")[0].value);
+            var phepToan = document.querySelector('input[name="phepToan"]:checked').value;
+            var ketqua;
+
+            switch (phepToan) {
+                case 'cong':
+                    ketqua = so01 + so02;
+                    break;
+                case 'tru':
+                    ketqua = so01 - so02;
+                    break;
+                case 'nhan':
+                    ketqua = so01 * so02;
+                    break;
+                case 'chia':
+                    ketqua = so01 / so02;
+                    break;
+                default:
+                    break;
+            }
+            document.getElementsByName("Ketqua")[0].value = ketqua;
+        }
+    </script>
+    <input type="text" name="So01" placeholder="Số thứ nhất">
+    <input type="text" name="so02" placeholder="Số thứ hai" style="margin-left: 30px">&emsp;&emsp;&nbsp;=
+    <input type="text" name="Ketqua" placeholder="Kết quả" style="margin-left: 30px" readonly><br><br>
+    <input type="radio" name="phepToan" value="cong" style="margin-left: 70px"> Cộng
+    <input type="radio" name="phepToan" value="tru" style="margin-left: 70px"> Trừ
+    <input type="radio" name="phepToan" value="nhan" style="margin-left: 70px"> Nhân
+    <input type="radio" name="phepToan" value="chia" style="margin-left: 70px"> Chia<br><br>
+    <button onclick="tinhToan()" style="padding: 6px 20px">Tính</button>
+</body>
+</html>
