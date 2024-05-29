@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập thông tin hóa đơn</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+        button[type="submit"] {
+            font-family: 'Times New Roman';
+            font-size: 22px;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 7px;
+            border: 1px solid black;
+            cursor: pointer;
+            color: white;
+            background-color: blue;
+            width: 440px;
+            margin-left: 190px;
+        }
+        p {
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        input[type="text"] {
+            width: 440px;
+            height: 30px;
+            border: 1px solid black;
+        }
+        .container {
+            background-color: white;
+            margin-left: 324px;
+            margin-top: 80px;
+            width: 700px;
+            height: 440px;
+            padding: 0;
+            border: 4px solid black;
+            border-radius: 45px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TRANG NHẬP THÔNG TIN HÓA ĐƠN</h1>
+        <hr color="black" size="2" width="90%"><br>
+        <form action="InsertHoaDon.php" method="post">
+            <p>Mã hóa đơn: <input type="text" name="txtMahd" style="margin-left: 53px"></p> 
+            <p>Mã khách hàng: <input type="text" name="txtMakh" style="margin-left: 26px"></p>
+            <p>Mã hàng: <input type="text" name="txtMahang" style="margin-left: 79px"></p>
+            <p>Số lượng: <input type="text" name="txtSoluong" style="margin-left: 75px"></p>
+            <p>Thành tiền: <input type="text" name="txtThanhtien" style="margin-left: 62px"></p>
+            <button type="submit">Nhập</button>
+        </form>
+    </div>
+</body>
+</html>
